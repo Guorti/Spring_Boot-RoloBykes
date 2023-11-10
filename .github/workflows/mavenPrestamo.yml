@@ -34,5 +34,8 @@ jobs:
     - name:  Ejecutar mysql
       run: cd rolobykes; docker compose up -d
 
+    - name: Wait for 10 seconds
+      run: sleep 10
+
     - name: Probar
       run: cd rolobykes; mvn test -Dgroups="Prestamo"
